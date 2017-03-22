@@ -1,0 +1,771 @@
+                                       BASIC JAVA
+OBJECT ORIENTED PROGRAMMING
+1.Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", 
+which may contain data, in the form of fields, often known as attributes; and code, 
+in the form of procedures, often known as methods.
+2.Object Oriented programming is a programming style that is associated with the concept of Class, 
+Objects and various other concepts revovling around these two, 
+like Inheritance, Polymorphism, Abstraction, Encapsulation etc
+
+object in object oriented programming
+An object can be a variable, a data structure, or a function. In the class-based object-oriented programming paradigm, 
+"object"refers to a particular instance of a class where the object can be a combination of variables,functions,and data structures.
+
+INHERITANCE
+1.When one object acquires all the properties and behaviours of parent object i.e. known as inheritance. 
+It provides code reusability. It is used to achieve runtime polymorphism.
+2.The class which inherits the properties of other is known as subclass (derived class, child class) and 
+the class whose properties are inherited is known as superclass (base class, parent class).
+
+SUPER KEYWORD
+It is used to differentiate the members of superclass from the members of subclass, if they have same names.
+It is used to invoke the superclass constructor from subclass
+
+
+IMPLEMENTS
+the implements keyword is used with classes to inherit the properties of an interface. 
+Interfaces can never be extended by a class.
+
+
+OVERRIDING
+overriding means to override the functionality of an existing method.
+
+Rules for Method Overriding
+The argument list should be exactly the same as that of the overridden method.
+The return type should be the same or a subtype of the return type declared in the original overridden method in the superclass.
+The access level cannot be more restrictive than the overridden method's access level. For example: If the superclass method is declared public then the overridding method in the sub class cannot be either private or protected.
+Instance methods can be overridden only if they are inherited by the subclass.
+A method declared final cannot be overridden.
+A method declared static cannot be overridden but can be re-declared.
+If a method cannot be inherited, then it cannot be overridden.
+A subclass within the same package as the instance's superclass can override any superclass method that is not declared private or final.
+A subclass in a different package can only override the non-final methods declared public or protected.
+An overriding method can throw any uncheck exceptions, regardless of whether the overridden method throws exceptions or not. However, the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower or fewer exceptions than the overridden method.
+Constructors cannot be overridden.
+
+
+
+POLYMORPHISM
+Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP 
+occurs when a parent class reference is used to refer to a child class object.
+In java, we use method overloading and method overriding to achieve polymorphism.
+ex.
+public interface Vegetarian{}
+public class Animal{}
+public class Deer extends Animal implements Vegetarian{}
+
+the deer class is polymorphic
+
+
+ABSTRACTION
+abstraction is a process of hiding the implementation details from the user, only the functionality will be provided 
+to the user. In other words, the user will have the information on what the object does instead of how it does it.
+abstraction is achieved using Abstract classes and interfaces.
+
+
+ENCAPSULATION
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together 
+as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed 
+only through the methods of their current class. Therefore, it is also known as data hiding.
+##To achieve encapsulation in Java -
+Declare the variables of a class as private.
+Provide public setter and getter methods to modify and view the variables values.
+
+
+INTERFACE
+An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. 
+A class implements an interface, thereby inheriting the abstract methods of the interface.
+An interface can contain any number of methods.
+An interface is written in a file with a .java extension, with the name of the interface matching the name of the file.
+The byte code of an interface appears in a .class file.
+Interfaces appear in packages, and their corresponding bytecode file must be in a directory structure that matches the package name
+
+
+JAVA REFLECTION
+Java Reflection is a process of examining or modifying the run time behavior of a class at run time.
+The java.lang.Class class provides many methods that can be used to get metadata, examine and change the run time behavior of a class.
+The java.lang and java.lang.reflect packages provide classes for java reflection.
+
+If a programmer wants to access entities or invoke methods in a program dynamically, i.e. 
+if the programmer is unaware of the methods and variables that needs to be invoked at 
+runtime but unaware of it while coding, we can use reflection.
+Where it is used
+The Reflection API is mainly used in:
+IDE (Integrated Development Environment) e.g. Eclipse, MyEclipse, NetBeans etc.
+Debugger
+Test Tools etc.
+
+
+
+
+Synchronization in Java
+
+Synchronization in java is the capability to control the access of multiple threads to any shared resource.
+
+Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+  
+why to use  Synchronization :                          
+To prevent thread interference.
+To prevent consistency problem.
+
+
+
+Java I/O Tutorial
+
+Java I/O (Input and Output) is used to process the input and produce the output.
+
+Java uses the concept of stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
+
+We can perform file handling in java by Java I/O API.
+
+
+What is a transient variable?
+A transient variable is a variable that may not be serialized.
+
+Which containers use a border Layout as their default layout?
+The Window, Frame and Dialog classes use a border layout as their default layout.
+
+Why do threads block on I/O?
+Threads block on I/O (that is enters the waiting state) so that other threads may execute while the I/O Operation is performed.
+
+How are Observer and Observable used?
+Objects that subclass the Observable class maintain a list of observers. When an Observable object is updated it invokes the update() method of each of its observers to notify the observers that it has changed state. The Observer interface is implemented by objects that observe Observable objects.
+
+What is synchronization and why is it important?
+With respect to multithreading, synchronization is the capability to control the access of multiple threads to shared resources. Without synchronization, it is possible for one thread to modify a shared object while another thread is in the process of using or updating that object's value. This often leads to significant errors.
+
+Can a lock be acquired on a class?
+Yes, a lock can be acquired on a class. This lock is acquired on the class's Class object..
+
+
+
+
+SUPER AND THIS
+If you want to access methods of the base class from derived class "super" keyword is used.
+ To access methods of the same class "this" keyword is used.
+
+
+ Why String is immutable in Java ?
+String is a special type of immutable class. Immutable class is a class 
+which once created, it’s contents can not be changed. Immutable objects are 
+the objects whose state can't be changed once constructed
+
+
+
+
+java arrayList
+Java ArrayList class uses a dynamic array for storing the elements.
+ It inherits AbstractList class and implements List interface.
+
+
+
+
+Java HashSet
+Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
+
+The important points about Java HashSet class are:
+
+HashSet stores the elements by using a mechanism called hashing.
+HashSet contains unique elements only.
+
+
+
+
+Java TreeSet class
+
+TreeSet class hierarchy
+Java TreeSet class implements the Set interface that uses a tree for 
+storage. It inherits AbstractSet class and implements NavigableSet 
+interface. The objects of TreeSet class are stored in ascending order.
+
+The important points about Java TreeSet class are:
+
+Contains unique elements only like HashSet.
+Access and retrieval times are quiet fast.
+Maintains ascending order
+
+Java Queue Interface
+
+Java Queue interface orders the element in FIFO(First In First Out) 
+manner. In FIFO, first element is removed first and last element is 
+removed at last.
+
+Java Map Interface
+
+A map contains values on the basis of key i.e. key and value pair. Each key and value pair is known as an entry. 
+Map contains only unique keys.
+
+Map is useful if you have to search, update or delete elements on the basis of key.
+
+
+						JAVA HASHMAP
+Java HashMap class implements the map interface by using a hashtable. It inherits AbstractMap class and implements Map interface.
+
+The important points about Java HashMap class are:
+
+A HashMap contains values based on the key.
+It contains only unique elements.
+It may have one null key and multiple null values.
+It maintains no order.
+
+
+				JAVA TREEMAP
+
+Java TreeMap class implements the Map interface by using a tree. It provides an efficient means of storing key/value pairs in sorted order.
+
+The important points about Java TreeMap class are:
+
+A TreeMap contains values based on the key. It implements the NavigableMap interface and extends AbstractMap class.
+It contains only unique elements.
+It cannot have null key but can have multiple null values.
+It is same as HashMap instead maintains ascending order.
+
+
+
+Sorting in Collection
+
+We can sort the elements of:
+
+String objects
+Wrapper class objects
+User-defined class objects
+Collections class provides static methods for sorting the elements of collection.If collection elements are of Set type,
+ we can use TreeSet.But We cannot sort the elements of List.Collections class provides methods for sorting the elements of 
+List type elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ADVANTAGES OF SPRING BOOT
+
+It is very easy to develop Spring Based applications with Java or Groovy.
+It reduces lots of development time and increases productivity.
+It avoids writing lots of boilerplate Code, Annotations and XML Configuration.
+It is very easy to integrate Spring Boot Application with its Spring Ecosystem like Spring JDBC, Spring ORM, Spring Data, Spring Security etc.
+It follows “Opinionated Defaults Configuration” Approach to reduce Developer effort
+It provides Embedded HTTP servers like Tomcat, Jetty etc. to develop and test our web applications very easily.
+It provides CLI (Command Line Interface) tool to develop and test Spring Boot(Java or Groovy) Applications from command prompt very easily and quickly.
+It provides lots of plugins to develop and test Spring Boot Applications very easily using Build Tools like Maven and Gradle
+It provides lots of plugins to work with embedded and in-memory Databases very easily.
+
+
+ADVANTAGES OF SPRING '
+
+1.predifened templates
+2.loose coupling
+3.easy to test
+4.lightweight
+5.fast devolopment
+6. powerful absraction
+7. declarative support
+
+POJO-DOSNT inherit any class or implement any interface
+
+scopes of beans 
+reflection in java 
+saop & rest
+mongodb & oracle
+spring cloud
+
+ IOC & DI provides loose coupling, removes dependancy from programm
+
+IOC container is responsible to:
+create the instance
+configure the instance, and
+assemble the dependencies
+
+There are two types of IoC containers. They are:
+BeanFactory
+ApplicationContext
+
+BeanFactory is the basic container whereas ApplicationContext is the advanced container
+
+AUTOWIRING
+Autowiring enables the programmer to inject the bean automatically.NO NEED TO WRITE EXCPLICIT INJECTION LOGIC.
+BYNAME 
+BYTYPE
+CONSTRUCTOR
+
+
+BEAN SCOPES
+
+1)singleton	The bean instance will be only once and same instance will be returned by the IOC container. It is the default scope.
+2)prototype	The bean instance will be created each time when requested.
+3)request	The bean instance will be created per HTTP request.
+4)session	The bean instance will be created per HTTP session.
+5)globalsession	The bean instance will be created per HTTP global session. It can be used in portlet context only.
+
+Singleton scope - EJB stateless session bean 
+ prototype scope - EJB stateful session bean.
+
+##transaction management 
+Programmatic Transaction Management:few
+Declarative Transaction Management:many
+
+## advantages of JdbcTemplate
+no need to write lot of code before and after executing the query, such as creating connection, statement, closing resultset, connection etc
+no ned write perform exception handling code on the database logic,exception handling.
+It provides you methods to write the queries directly, so it saves a lot of work and time.
+
+
+##fetch records by spring JdbcTemplate
+ResultsetExtractor
+RowMapper
+
+
+##AOP
+AOP is an acronym for Aspect Oriented Programming. It is a methodology that divides the program logic into pieces or parts or concerns.
+It increases the modularity and the key unit is Aspect.
+AOP enables you to dynamically add or remove concern before or after the business logic. It is pluggable and easy to maintain.
+
+
+
+AOP TERMINOLOGY
+
+JoinPoint-any point in your program such as field access, method execution, exception handling
+
+Advice-action taken by aspect
+TYPES-
+Before Advice
+After Advice
+After Returning Advice
+Throws Advice
+Around Advice
+
+Pointcut-Pointcut is expression language of Spring AOP
+
+Aspect-a class in spring AOP that contains advices and joinpoints
+
+Introduction-introduction of new fields and methods for a type
+
+Target Object- IS A proxy object that is advised by one or more aspects
+
+Interceptor- a class like aspect that contains one advice only
+
+AOP Proxy
+
+Weaving- a process of linking aspect with other application
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+                                                              HIBERNATE
+HIBERNATE
+Hibernate is an open-source and lightweight ORM tool that is used to store, manipulate and retrieve data from the database.
+
+
+
+ORM
+ORM is an acronym for Object/Relational mapping. It is a programming strategy to map object with the data stored in the database. It simplifies data creation, data manipulation and data access.
+
+##core interfaces of Hibernate
+Configuration
+
+SessionFactory-SessionFactory provides the instance of Session. It is a factory of Session. It holds the data of second level cache that is not enabled by default.
+
+Session-It maintains a connection between hibernate application and database.
+
+
+Query
+Criteria
+Transaction
+
+
+states of object in hibernate
+Transient
+Persistent
+Detached
+
+##inheritance mapping strategies in hibernate
+Table per hierarchy
+Table per concrete class
+Table per subclass
+
+association mapping are possible in hibernate
+One to One
+One to Many
+Many to One
+Many to Many
+
+
+collection mapping -: One-to-Many and Many-to-Many
+
+------------------------------------------------------------------------------------------------------------------------------
+ Runtime Polymorphism
+ a process in which a call to an overridden method is resolved at runtime rather than at compile-time.
+
+static binding-object is determined at compile time
+dynamic binding-object is determined at runtime.
+
+abstraction-Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+encapsulation -wraps code and data into a single unit.
+
+
+interface-
+Interface is a blueprint of a class that have static constants and abstract methods.It can be used to achieve fully abstraction and multiple inheritance.
+
+
+serialization
+Serialization is a process of writing the state of an object into a byte stream.It is mainly used to travel object's state on the network.	
+
+reflection
+Reflection is the process of examining or modifying the runtime behaviour of a class at runtime.It is used in:
+IDE (Integreted Development Environment) e.g. Eclipse, MyEclipse, NetBeans.
+Debugger
+Test Tools etc.
+
+
+access the private method from outside the class?
+changing the runtime behaviour of a class if the class is not secured.
+
+
+List-duplicate elements
+ and Set-unique elements,only values
+MAP-keys and values
+HASHMAP - NOT SYNCRONIZED.
+HashSet -maintains no order ,only values
+TreeSet maintains ascending order
+
+-------------------------------------------------------------------------------------------------------------------------
+
+JDBC
+JDBC is a Java API that is used to connect and execute query to the database. JDBC API uses jdbc drivers to connects to the database.
+
+JDBC Driver?
+JDBC Driver is a software component that enables java application to interact with the database.There are 4 types of JDBC drivers:
+JDBC-ODBC bridge driver
+Native-API driver (partially java driver)
+Network Protocol driver (fully java driver)
+Thin driver (fully java driver)
+
+JDBC API components
+
+Interfaces:
+Connection
+Statement
+PreparedStatement
+ResultSet
+ResultSetMetaData
+DatabaseMetaData
+CallableStatement etc.
+
+Classes:
+DriverManager
+Blob
+Clob
+Types
+SQLException etc.
+
+
+JDBC statements?
+
+JDBC statements.
+Statement-query is complied each time
+PreparedStatement- query is complied only once
+CallableStatement-IT execute stored procedures and functions.
+
+
+JDBC DriverManager class -manages the registered drivers. 
+                         It can be used to register and unregister drivers. 
+			It provides factory method that returns the instance of Connection.
+
+
+ JDBC Connection interface- maintains a session with the database. 
+			   It can be used for transaction management. 
+			  It provides factory methods that returns the instance of Statement, PreparedStatement, CallableStatement and DatabaseMetaData.
+
+batch processing-
+By using batch processing technique in JDBC, we can execute multiple queries. It makes the performance fast.
+
+
+PreparedStatement interface, we can store and retrieve images
+
+
+DatabaseMetaData interface
+ returns the information of the database such as username, driver name, driver version, number of tables, number of views
+
+
+ResultSetMetaData interface 
+returns the information of table such as total number of columns, column name, column type etc.
+
+
+ResultSet object 
+represents a row of a table. It can be used to change the cursor pointer and get the information from the database.
+
+----------------------------------------------------------------------------------------------
+when mongodb
+1.High Write Load
+high insert rate over transaction safety
+2.Your Data is Location Based
+MongoDB has built in spacial functions, so finding relevant data from specific locations is fast and accurate.
+3.Your Data Set is Going to be Big (starting from 1GB) and Schema is Not Stable
+As MongoDB is schema-less, adding a new field, does not effect old rows (or documents) and will be instant
+4.You Don't have a DBA
+If you don't have a DBA, and you don't want to normalize your data and do joins, you should consider MongoDB. 
+MongoDB is great for class persistence, as classes can be serialized to JSON and stored AS IS in MongoDB.
+
+MySQL	MongoDB
+Table	Collection
+Row	Document
+Column	Field
+Joins	Embedded documents, linking
+
+
+Advantages of mongodb
+flexible xhema
+easy deployment
+auto scalability
+designed for bigdata
+easy monitoring
+
+-------------------------------------------------------------------------------------------------------
+WEB SERVICES
+Web Service is a way to expose the functionality of an application to other application, without a user interface. It is a service which exposes an API over HTTP.
+Web Service is a connection technology, a way to connect services together into a Service Oriented Architecture (SOA).
+Web Services allow applications developed in different technologies to communicate with each other through a common format like XML, Jason, etc.
+
+
+MICRO SERVICES
+Micro Service is independently deployable service modeled around a business domain. 
+It is a method of breaking large software applications into loosely coupled modules, in which each service runs a unique process and communicates through APIs. 
+It can be developed using messaging or event-driven APIs, or using non-HTTP backed RPC mechanisms.
+
+ ##Web Service :
+
+is a client server application or application component for communication.
+method of communication between two devices over network.
+is a software system for interoperable machine to machine communication.
+is a collection of standards or protocols for exchanging information between two devices or application.
+
+SOAP
+
+SOAP
+
+SOAP is an acronym for Simple Object Access Protocol.
+SOAP is a XML-based protocol for accessing web services.
+SOAP is a W3C recommendation for communication between applications.
+SOAP is XML based, so it is platform independent and language independent. In other words, it can be used with Java, .Net or PHP language on any platform.
+Advantages of Soap Web Services:
+WS Security: SOAP defines its own security known as WS Security.
+Language and Platform independent: SOAP web services can be written in any programming language and executed in any platform.
+DISADVATAGES OF SOAP:
+Slow: SOAP uses XML format that must be parsed to be read. It defines many standards that must be followed while developing the SOAP applications. So it is slow and consumes more bandwidth and resource.
+WSDL dependent: SOAP uses WSDL and doesn't have any other mechanism to discover the service.
+
+WSDL
+
+WSDL is an acronym for Web Services Description Language.
+WSDL is a xml document containing information about web services such as method name, method parameter and how to access it.
+WSDL is a part of UDDI. It acts as a interface between web service applications.
+
+UDDI
+
+UDDI is an acronym for Universal Description, Discovery and Integration.
+UDDI is a XML based framework for describing, discovering and integrating web services.
+UDDI is a directory of web service interfaces described by WSDL, containing information about web services.
+
+RESTFUL WEB SERVICES:
+Advantages of RESTful Web Services:
+Fast: RESTful Web Services are fast because there is no strict specification like SOAP. It consumes less bandwidth and resource.
+Language and Platform independent: RESTful web services can be written in any programming language and executed in any platform.
+Can use SOAP: RESTful web services can use SOAP web services as the implementation.
+Permits different data format: RESTful web service permits different data format such as Plain Text, HTML, XML and JSON
+
+
+	SOAP								REST
+1)	SOAP is a protocol.					REST is an architectural style.
+2)	SOAP stands for Simple Object Access Protocol.		REST stands for REpresentational State Transfer.
+3)	SOAP can't use REST because it is a protocol.		REST can use SOAP web services because it is a concept and can use any protocol like HTTP, SOAP.
+4)SOAP uses services interfaces to expose the business logic.	REST uses URI to expose business logic.
+5)	JAX-WS is the java API for SOAP web services.		JAX-RS is the java API for RESTful web services.
+6)	SOAP defines standards to be strictly followed.		REST does not define too much standards like SOAP.
+7)	SOAP requires more bandwidth and resource than REST.	REST requires less bandwidth and resource than SOAP.
+8)	SOAP defines its own security.				RESTful web services inherits security measures from the underlying transport.
+9)	SOAP permits XML data format only.			REST permits different data format such as Plain text, HTML, XML, JSON etc.
+10)	SOAP is less preferred than REST.			REST more preferred than SOAP.
+
+
+Service Oriented Architecture (SOA)
+Service Oriented Architecture or SOA is a design pattern. It is designed to provide services to other applications through protocol. It is a concept only and not tied to any programming language or platform.
+Web services is a technology of SOA most likely.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                                                    MULESOFT
+
+MULESOFT
+Mule is a lightweight integration platform that enables you to connect anything, anywhere.
+ Rather than creating multiple point-to-point integrations between systems, services, APIs, and devices, you can use
+ Mule to intelligently manage message routing, data mapping, orchestration, reliability, security, and scalability 
+between nodeS.
+
+MULE CAN DO:
+
+integrate applications or systems on premises or in the cloud
+use out-of-the-box connectors to create SaaS integration applications
+build and expose APIs
+consume APIs
+create Web services which orchestrate calls to other services
+create interfaces to expose applications for mobile consumption
+integrate B2B with solutions that are secure, efficient, and quick to build and deploy
+shift applications onto the cloud
+connect B2B e-commerce activ
+
+Flows
+A flow is the construct within which you link together several individual elements to handle the receipt, processing, 
+and eventual routing of a message. You can connect many flows together to build a complete application which you can 
+then deploy on premise, on Mule or another application server, or in the cloud. 
+
+
+Batch Jobs
+A batch job is a top-level element in Mule which exists outside all Mule flows. Batch jobs split large messages into
+ records which Mule processes asynchronously; just as flows process messages, batch jobs process records.
+
+MULE MESSAGE STRUCTURE:
+The Mule message is the data that passes through an application via one or more flows. It consists of two main parts:
+the message header,: which contains metadata about the message 
+the message payload,: which contains your business-specific data. 
+
+
+
+iNBOUND PROPERTIES:
+Inbound properties are immutable, are automatically generated by the message source and cannot be set or 
+manipulated by the user. 
+
+ OUTBOUND PROPERTIES:
+are mutable; they are set during the course of a flow and can become inbound properties when the message passes 
+from the outbound endpoint of one flow to the inbound endpoint of a different flow via a transport.
+
+
+                 VARIABLES
+Flow variables: apply only to the flow in which they exist. 
+
+Session variables: apply across all flows within the same application. 
+
+Record variables: apply to only to records processed as part of a batch.
+
+
+
+Use a Logger component to log activities in the flow as they occur. 
+
+Use an Expression component to evaluate a particular expression upon a message in a flow.
+
+Use an Invoke component to invoke the method of an object specified with a Mule expression.
+
+Use an Echo component to return the payload of a message as a call response.
+
+Use a Flow Reference component to access another flow from within a flow.
+
+Use a Batch Execute component to kick off processing of a batch job.
+
+
+
+					RAML DEFINATION
+API Designer – a web-based tool geared towards rapid and efficient API design
+API Workbench – an IDE for designing, building, testing, and documenting RESTful APIs that supports both RAML 0.8 and 1.0
+RAML Cop – a tool for validating RAML files
+RAML for JAX-RS – a set of tools for generating a skeleton of Java + JAX-RS application code from a RAML spec, or for generating a RAML spec from an existing JAX-RS application
+RAML Sublime Plugin – a syntax highlighter plugin for the Sublime text editor
+RAML to HTML – a tool for generating HTML documentation from RAML
+raml2pdf – a tool for generating PDF documentation from RAML
+RAML2Wiki – a tool for generating Wiki documentation (using Confluence/JIRA markup)
+SoapUI RAML Plugin – a RAML plugin for the popular SoapUI functional API testing suite
+Vigia – an integration test suite capable of generating test cases based on a RAML definition.
+
+
+
+COMPONANTS OF RAML :
+ROOT SECTION:
+	     The root section of the format describes the basic information of an API, such as its title and base URI, 
+	    and describes how to define common schema references.
+	    RAML-documented API definition properties MAY appear in any order.
+
+EXAMPLE:
+
+#%RAML 0.8
+title: GitHub API
+version: v3
+baseUri: https://api.github.com
+mediaType:  application/json
+schemas:
+  - User:  schema/user.json
+    Users: schema/users.json
+    Org:   schema/org.json
+    Orgs:  schema/orgs.json
+
+
+API Title:
+
+	(Required) The title property is a short plain text description of the RESTful API. The title property's value SHOULD 
+	be suitable for use as a title for the contained user documentation.
+
+Base URI and baseUriParameters;
+		A RESTful API's resources are defined relative to the API's base URI. The use of the baseUri field is 
+OPTIONAL to allow describing APIs that have not yet been implemented. After the API is implemented 
+(even a mock implementation) and can be accessed at a service endpoint, the API definition MUST contain a baseUri property. The baseUri property's value MUST conform to the URI specification [RFC2396] or a Level 1 Template URI as defined in RFC 6570 [RFC6570].
+		The baseUri property SHOULD only be used as a reference value. API client generators MAY make the 
+		baseUri configurable by the API client's users.
+PROTOCOLS:
+ 	A RESTful API can be reached via HTTP, HTTPS, or both. The protocols property MAY be used to specify the protocols t
+That an API supports. If the protocols property is not specified, the protocol specified at the baseUri property is used. 
+The protocols property MUST be an array of strings, of values "HTTP" and/or "HTTPS". 
+EXAMPLES;
+#%RAML 0.8
+title: Salesforce Chatter REST API
+version: v28.0
+protocols: [ HTTP, HTTPS ]
+baseUri: https://na1.salesforce.com/services/data/{version}/chatter
+
+Default Media Type
+text/yaml
+text/x-yaml
+application/yaml
+application/x-yaml*	
+
+SCHEMAS
+       To better achieve consistency and simplicity, the API definition SHOULD include an OPTIONAL schemas property in 
+the root section. The schemas property specifies collections of schemas that could be used anywhere in the API definition. The value of the schemas property is an array of maps; in each map, the keys are the schema name, and the values are schema definitions. The schema definitions MAY be included inline or by using the RAML !include user-defined data type.
+schemas:
+  - !include path-to-canonical-schemas/canonicalSchemas.raml
+  - File:       !include path-to-schemas/filesystem/file.xsd
+    FileUpdate: !include path-to-schemas/filesystem/fileupdate.xsd
+    Files:      !include path-to-schemas/filesystem/files.xsd
+    Dir:        !include path-to-schemas/filesystem/dir.xsd
+    Dirs:       !include path-to-schemas/filesystem/dirs.xsd
+
+
+YAML
+    YAML (/'jæm?l/, rhymes with camel) is a human-readable data serialization language. It is commonly used for 
+configuration files, but could be used in many applications where data is being stored
+
+MULE ESB
+	Mule is a lightweight enterprise service bus (ESB) and integration framework[1] provided by MuleSoft. 
+The platform is Java-based, but can broker interactions between other platforms such as .NET using web services or sockets.
+
+
+APIKIT
+	APIkit is a declarative toolkit that leverages RAML to build and facilitate the implementation of APIs. 
+It uses RAML as the definition of the API, which can then be used with APIkit Maven- and Mule Studio-based tools for 
+mocking the interface and implementing its backend using Mule flows.
+
+ 
