@@ -1,0 +1,34 @@
+Run Zookeeper
+---------------------
+Open command prompt->go to bin\windows folder of kafka
+C:\kafka_2.11-0.10.0.0\bin\windows>zookeeper-server-start.bat C:\kafka_2.11-0.10.0.0\config\zookeeper.properties
+
+
+Run Kafka
+-----------------------
+Open command prompt->go to bin\windows folder of kafka
+C:\kafka_2.11-0.10.0.0\bin\windows>kafka-server-start.bat C:\kafka_2.11-0.10.0.0\config\server.properties
+
+
+create kafka topic/channel
+----------------------------
+Open command prompt->go to bin\windows folder of kafka
+C:\kafka_2.11-0.10.0.0\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+
+create topic producer
+------------------------
+Open command prompt->go to bin\windows folder of kafka
+C:\kafka_2.11-0.10.0.0\bin\windows>kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+
+create topic consumer
+-------------------------
+Open command prompt->go to bin\windows folder of kafka
+C:\kafka_2.11-0.10.0.0\bin\windows>kafka-console-consumer.bat --zookeeper localhost:2181 --topic test --from-begining
+
+C:\kafka_2.11-0.10.0.0\bin\windows>kafka-console-consumer.bat --zookeeper localhost:2181 --topic reservations --from-begining
+
+
+
+
